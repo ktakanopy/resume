@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kevin Takano - Hopper Resume</title>
+  <style>
+    :root {
+      --ink: #17202a;
+      --muted: #52606d;
+      --rule: #d7dde4;
+      --accent: #184c67;
+      --paper: #ffffff;
+    }
+
+    @page {
+      size: letter;
+      margin: 0.42in;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      background: #eef2f5;
+    }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--paper);
+      font-family: "Avenir Next", "Segoe UI", sans-serif;
+      font-size: 9.55pt;
+      line-height: 1.17;
+    }
+
+    .page {
+      width: 8.5in;
+      min-height: 11in;
+      margin: 0 auto;
+      padding: 0.42in;
+      background: var(--paper);
+    }
+
+    header {
+      margin-bottom: 0.08in;
+      border-bottom: 1px solid var(--rule);
+      padding-bottom: 0.06in;
+    }
+
+    h1 {
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 19.5pt;
+      letter-spacing: 0.02em;
+      line-height: 1;
+    }
+
+    .headline {
+      margin-top: 4px;
+      color: var(--accent);
+      font-size: 9.8pt;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    .contact {
+      margin-top: 4px;
+      color: var(--muted);
+      font-size: 8.75pt;
+      font-style: normal;
+    }
+
+    .contact span {
+      white-space: nowrap;
+    }
+
+    .contact a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .contact .sep {
+      margin: 0 5px;
+      color: #8b98a5;
+    }
+
+    section {
+      margin-top: 0.08in;
+    }
+
+    h2 {
+      margin: 0 0 0.03in;
+      font-size: 9.45pt;
+      font-weight: 800;
+      letter-spacing: 0.09em;
+      text-transform: uppercase;
+      color: var(--accent);
+    }
+
+    p {
+      margin: 0;
+    }
+
+    .summary {
+      font-size: 9.3pt;
+    }
+
+    .skills {
+      display: grid;
+      grid-template-columns: 88px 1fr;
+      gap: 3px 8px;
+      font-size: 8.8pt;
+    }
+
+    .skills strong {
+      color: var(--ink);
+    }
+
+    .entry,
+    .compact-entry,
+    .education-item {
+      break-inside: avoid;
+    }
+
+    .entry {
+      margin-top: 0.05in;
+    }
+
+    .entry:first-of-type {
+      margin-top: 0;
+    }
+
+    .entry-header,
+    .compact-header,
+    .education-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .education-item + .education-item {
+      margin-top: 2px;
+    }
+
+    .entry-header,
+    .compact-header {
+      margin-bottom: 1px;
+    }
+
+    .role,
+    .degree {
+      font-weight: 800;
+      font-size: 9.35pt;
+    }
+
+    .company,
+    .school,
+    .meta {
+      font-weight: 600;
+      color: var(--muted);
+    }
+
+    .date {
+      font-size: 8.6pt;
+      color: var(--muted);
+      white-space: nowrap;
+    }
+
+    ul {
+      margin: 0.01in 0 0;
+      padding-left: 0.14in;
+    }
+
+    li {
+      margin: 0;
+    }
+
+    .compact-entry {
+      margin-top: 0.04in;
+    }
+
+    .compact-entry ul {
+      margin-top: 0.015in;
+    }
+
+    .screen-note {
+      max-width: 8.5in;
+      margin: 14px auto 0;
+      padding: 10px 14px;
+      font-size: 9pt;
+      color: #4d5a67;
+      background: #f5f8fa;
+      border: 1px solid #d8e0e7;
+      border-radius: 10px;
+    }
+
+    @media print {
+      html {
+        background: transparent;
+      }
+
+      body {
+        font-size: 9.35pt;
+      }
+
+      .page {
+        width: auto;
+        min-height: auto;
+        margin: 0;
+        padding: 0;
+      }
+
+      section {
+        margin-top: 0.06in;
+      }
+
+      .entry {
+        margin-top: 0.04in;
+      }
+
+      .compact-entry {
+        margin-top: 0.03in;
+      }
+
+      .screen-note {
+        display: none;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <article class="page">
+    <header>
+      <h1>Kevin Takano</h1>
+      <div class="headline">Senior Agentic AI Software Engineer | Machine Learning Engineer</div>
+      <address class="contact">
+        <span>Curitiba, Parana, Brazil</span>
+        <span class="sep">|</span>
+        <span><a href="mailto:kevin.takano@gmail.com">kevin.takano@gmail.com</a></span>
+        <span class="sep">|</span>
+        <span><a href="https://www.linkedin.com/in/ktakanopy">linkedin.com/in/ktakanopy</a></span>
+        <span class="sep">|</span>
+        <span><a href="https://substack.com/@ktakanopy">substack.com/@ktakanopy</a></span>
+      </address>
+    </header>
+
+    <main>
+      <section aria-labelledby="summary-heading">
+        <h2 id="summary-heading">Summary</h2>
+        <p class="summary">Senior engineer with 10 years of software engineering experience, including 5 years building machine learning systems across agentic AI, large language model (LLM) applications, recommender systems, forecasting, and MLOps. Built evaluation loops, guardrails, reusable platforms, and autonomous end-to-end workflows across Scala, Python, TypeScript, Java, GCP, AWS, and distributed systems.</p>
+      </section>
+
+      <section aria-labelledby="skills-heading">
+        <h2 id="skills-heading">Core Skills</h2>
+        <div class="skills">
+          <strong>Agentic AI</strong>
+          <span>AI agents, agentic workflows, LLM evaluation, guardrails, feedback loops, OpenAI, LangGraph, LangChain, DSPy, prompt engineering, RAG</span>
+          <strong>Engineering</strong>
+          <span>Scala, Python, TypeScript, Java, Node.js, SQL, backend systems, distributed systems, APIs, unit testing, CI/CD</span>
+          <strong>Platforms</strong>
+          <span>Spark, GCP, BigQuery, AWS, SageMaker, Airflow, Kubernetes, Docker, Postgres, AWS SQS, model monitoring, technical documentation</span>
+          <strong>Execution</strong>
+          <span>Autonomous delivery, end-to-end feature development, product thinking, product ownership, stakeholder communication, async documentation, experimentation</span>
+        </div>
+      </section>
+
+      <section aria-labelledby="experience-heading">
+        <h2 id="experience-heading">Experience</h2>
+
+        <div class="entry">
+          <div class="entry-header">
+            <div>
+              <span class="role">Senior Machine Learning Engineer</span>
+              <span class="company"> | QuintoAndar</span>
+            </div>
+            <time class="date" datetime="2025-05">May 2025 - Present</time>
+          </div>
+          <ul>
+            <li>Built a production LLM evaluation workflow for rent inspections using images and policy rules, with metrics, alerts, database writes, and monitoring.</li>
+            <li>Created an LLM-as-judge feedback loop that improved classification quality by 10% and accelerated prompt iteration through stronger evaluation guardrails and production reliability checks.</li>
+            <li>Analyzed internal AI-agent architecture and built multi-step conversation scoring pipelines for agentic workflows, improving quality score from 0.48 to 0.90 using LangGraph, Langfuse, DSPy, Postgres, and AWS SQS.</li>
+          </ul>
+        </div>
+
+        <div class="entry">
+          <div class="entry-header">
+            <div>
+              <span class="role">Machine Learning Engineer | Data Scientist</span>
+              <span class="company"> | Nubank</span>
+            </div>
+            <time class="date" datetime="2024-05">May 2024 - May 2025</time>
+          </div>
+          <ul>
+            <li>Built a Scala and Spark calibration model for credit-card interest-rate prediction, reducing incorrect predictions by 80%.</li>
+            <li>Improved engineering velocity with reusable libraries, unit tests, self-serve async docs and specs, faster Docker-based CI/CD, and lower-GPU TensorFlow workflows.</li>
+            <li>Connected model behavior to business outcomes through time-series, causal, and revenue metrics with automated reporting pipelines.</li>
+          </ul>
+        </div>
+
+        <div class="entry">
+          <div class="entry-header">
+            <div>
+              <span class="role">Machine Learning Engineer | Data Scientist</span>
+              <span class="company"> | Hotmart</span>
+            </div>
+            <time class="date" datetime="2022-04">Apr 2022 - May 2024</time>
+          </div>
+          <ul>
+            <li>Led an end-to-end embedding recommender system on SageMaker and Kubernetes, increasing click conversion to 8.6% versus a 2.07% baseline and driving 3.8x more purchases.</li>
+            <li>Built a treasury forecasting system for PIX and billet payments that reduced error by 5% with a simpler, lower-maintenance feature set.</li>
+            <li>Re-architected chatbot context and document-processing flows with Python, RAG, LLMs, Java, Spring Boot, and LangChain, while maintaining shared MLOps tooling.</li>
+          </ul>
+        </div>
+
+        <div class="entry">
+          <div class="entry-header">
+            <div>
+              <span class="role">Data Scientist Freelancer</span>
+              <span class="company"> | Independent</span>
+            </div>
+            <time class="date" datetime="2024-10">Oct 2024 - Jan 2025</time>
+          </div>
+          <ul>
+            <li>Built TypeScript and Node.js LLM agents for Twitter and Telegram with plugin development, external tool actions, and OpenAI or OpenRouter integrations.</li>
+            <li>Delivered an end-to-end CatBoost conversion model with feature engineering, optimization, and deployment pipeline design that reduced costs by 50%.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section aria-labelledby="additional-heading">
+        <h2 id="additional-heading">Earlier Experience</h2>
+
+        <div class="compact-entry">
+          <div class="compact-header">
+            <div>
+              <span class="role">Data Scientist</span>
+              <span class="company"> | Instituto de Pesquisas Eldorado</span>
+            </div>
+            <time class="date" datetime="2020-12">2020 - 2022</time>
+          </div>
+          <p>Built dashboards, supervised and unsupervised models, and BigQuery pipelines for digital-bank acquisition; clustering reached 5% conversion versus 1% from random targeting.</p>
+        </div>
+
+        <div class="compact-entry">
+          <div class="compact-header">
+            <div>
+              <span class="role">Data Engineer</span>
+              <span class="company"> | Linx</span>
+            </div>
+            <time class="date" datetime="2018-10">2018 - 2020</time>
+          </div>
+          <p>Built Scala and Spark pipelines for segmentation, identity resolution, and recommendations; reduced AWS ingestion jobs from hours to minutes with incremental processing.</p>
+        </div>
+
+        <div class="compact-entry">
+          <div class="compact-header">
+            <div>
+              <span class="role">Back-End Software Engineer</span>
+              <span class="company"> | SIDIA - Samsung Instituto de P&amp;D da Amazonia</span>
+            </div>
+            <time class="date" datetime="2016-10">2016 - 2018</time>
+          </div>
+          <p>Developed Java, C++, and Node.js components for Android and Ginga middleware, plus CI and test automation that cut test runtime from hours to seconds and reduced library size by 50%.</p>
+        </div>
+      </section>
+
+      <section aria-labelledby="education-heading">
+        <h2 id="education-heading">Education</h2>
+        <div class="education-item">
+          <div>
+            <div class="degree">Master's in Informatics, Machine Learning <span class="school">| Universidade Federal do Amazonas</span></div>
+          </div>
+          <time class="date" datetime="2019">2019 - 2022</time>
+        </div>
+        <div class="education-item">
+          <div>
+            <div class="degree">Bachelor of Computer Science <span class="school">| Universidade Federal do Amazonas</span></div>
+          </div>
+          <time class="date" datetime="2012">2012 - 2016</time>
+        </div>
+      </section>
+    </main>
+  </article>
+
+  <div class="screen-note">Export tip: open this file in a browser and use Print -&gt; Save as PDF with paper size set to US Letter and margins set to Default.</div>
+</body>
+</html>

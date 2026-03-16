@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kevin Takano Resume</title>
+  <style>
+    :root {
+      --ink: #17202a;
+      --muted: #52606d;
+      --rule: #d7dde4;
+      --accent: #1e4d6b;
+      --paper: #ffffff;
+    }
+
+    @page {
+      size: letter;
+      margin: 0.48in;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      background: #eef2f5;
+    }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--paper);
+      font-family: "Avenir Next", "Segoe UI", sans-serif;
+      font-size: 10.3pt;
+      line-height: 1.28;
+    }
+
+    .page {
+      width: 8.5in;
+      min-height: 11in;
+      margin: 0 auto;
+      padding: 0.48in;
+      background: var(--paper);
+    }
+
+    header {
+      margin-bottom: 0.15in;
+      border-bottom: 1px solid var(--rule);
+      padding-bottom: 0.1in;
+    }
+
+    h1 {
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 23pt;
+      letter-spacing: 0.02em;
+      line-height: 1;
+    }
+
+    .headline {
+      margin-top: 4px;
+      color: var(--accent);
+      font-size: 11pt;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    .contact {
+      margin-top: 7px;
+      color: var(--muted);
+      font-size: 9.4pt;
+      font-style: normal;
+    }
+
+    .contact span {
+      white-space: nowrap;
+    }
+
+    .contact a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .contact .sep {
+      margin: 0 7px;
+      color: #8b98a5;
+    }
+
+    section {
+      margin-top: 0.14in;
+    }
+
+    h2 {
+      margin: 0 0 0.06in;
+      font-size: 10pt;
+      font-weight: 800;
+      letter-spacing: 0.09em;
+      text-transform: uppercase;
+      color: var(--accent);
+    }
+
+    p {
+      margin: 0;
+    }
+
+    .summary {
+      font-size: 10.2pt;
+    }
+
+    .skills {
+      display: grid;
+      grid-template-columns: 98px 1fr;
+      gap: 4px 10px;
+      font-size: 9.7pt;
+    }
+
+    .skills strong {
+      color: var(--ink);
+    }
+
+    .entry {
+      margin-top: 0.11in;
+      break-inside: avoid;
+    }
+
+    .entry:first-of-type {
+      margin-top: 0;
+    }
+
+    .entry-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 12px;
+      margin-bottom: 2px;
+      flex-wrap: wrap;
+    }
+
+    .role {
+      font-weight: 800;
+      font-size: 10pt;
+    }
+
+    .company {
+      font-weight: 600;
+      color: var(--muted);
+    }
+
+    .date {
+      font-size: 9.3pt;
+      color: var(--muted);
+      white-space: nowrap;
+    }
+
+    ul {
+      margin: 0.02in 0 0;
+      padding-left: 0.18in;
+    }
+
+    li {
+      margin: 1px 0;
+    }
+
+    .education-item {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      margin-top: 4px;
+      flex-wrap: wrap;
+      break-inside: avoid;
+    }
+
+    .education-item:first-of-type {
+      margin-top: 0;
+    }
+
+    .degree {
+      font-weight: 700;
+    }
+
+    .school {
+      color: var(--muted);
+    }
+
+    .screen-note {
+      max-width: 8.5in;
+      margin: 14px auto 0;
+      padding: 10px 14px;
+      font-size: 9pt;
+      color: #4d5a67;
+      background: #f5f8fa;
+      border: 1px solid #d8e0e7;
+      border-radius: 10px;
+    }
+
+    @media print {
+      html {
+        background: transparent;
+      }
+
+      body {
+        font-size: 10.1pt;
+      }
+
+      .page {
+        width: auto;
+        min-height: auto;
+        margin: 0;
+        padding: 0;
+      }
+
+      .screen-note {
+        display: none;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <article class="page">
+    <header>
+      <h1>Kevin Takano</h1>
+      <div class="headline">Machine Learning Engineer | AI Engineer</div>
+      <address class="contact">
+        <span>Curitiba, Parana, Brazil</span>
+        <span class="sep">|</span>
+        <span><a href="mailto:kevin.takano@gmail.com">kevin.takano@gmail.com</a></span>
+        <span class="sep">|</span>
+        <span><a href="https://www.linkedin.com/in/ktakanopy">linkedin.com/in/ktakanopy</a></span>
+      </address>
+    </header>
+
+    <main>
+      <section aria-labelledby="summary-heading">
+        <h2 id="summary-heading">Summary</h2>
+        <p class="summary">Engineer with 10 years of software engineering experience, including 5 years building production-grade machine learning and AI systems across large language model (LLM) applications, recommender systems, forecasting, model monitoring, and MLOps. Delivered end-to-end solutions at QuintoAndar, Nubank, and Hotmart spanning experimentation, deployment, evaluation, optimization, and measurable business impact.</p>
+      </section>
+
+      <section aria-labelledby="skills-heading">
+        <h2 id="skills-heading">Core Skills</h2>
+        <div class="skills">
+          <strong>ML and AI</strong>
+          <span>Python, PyTorch, TensorFlow, CatBoost, LLMs, OpenAI, LangGraph, LangChain, DSPy, RAG, Recommender Systems, Forecasting, Prompt Engineering, Model Evaluation, Model Monitoring, A/B Testing</span>
+          <strong>Data and MLOps</strong>
+          <span>Spark, Scala, Pandas, NumPy, BigQuery, SageMaker, Airflow, Kubernetes, Terraform, Docker, AWS, Postgres, AWS SQS, CI/CD, Feature Engineering, Feature Stores</span>
+          <strong>Delivery</strong>
+          <span>Production ML, Agentic Workflows, Business Metrics, Causal Metrics, Experimentation, Analytics, Dashboards, Cross-Functional Stakeholder Communication</span>
+        </div>
+      </section>
+
+      <section aria-labelledby="experience-heading">
+        <h2 id="experience-heading">Experience</h2>
+
+      <div class="entry">
+        <div class="entry-header">
+          <div>
+            <span class="role">Senior Machine Learning Engineer</span>
+            <span class="company"> | QuintoAndar</span>
+          </div>
+          <time class="date" datetime="2025-05">May 2025 - Present</time>
+        </div>
+        <ul>
+          <li>Built a production LLM evaluation workflow for rent inspection analysis using images and policy rules, including metrics, database writes, alerting, and online monitoring.</li>
+          <li>Improved classification quality by 10% through an LLM-as-judge pipeline that accelerated prompt iteration using OpenAI, LangChain, Postgres, and AWS SQS.</li>
+          <li>Designed conversation-level evaluation for AI agents and improved conversation quality score from 0.48 to 0.90 using LangGraph, Langfuse, DSPy, and prompt optimization.</li>
+        </ul>
+      </div>
+
+      <div class="entry">
+        <div class="entry-header">
+          <div>
+            <span class="role">Machine Learning Engineer | Data Scientist</span>
+            <span class="company"> | Nubank</span>
+          </div>
+          <time class="date" datetime="2024-05">May 2024 - May 2025</time>
+        </div>
+        <ul>
+          <li>Built a linear regression calibration model for credit card interest-rate prediction, reducing incorrect predictions by 80% in Scala and Spark.</li>
+          <li>Evaluated neural network performance with time-series, causal, and business metrics, connecting model behavior to utilization, rate, and revenue outcomes.</li>
+          <li>Improved ML platform efficiency by creating reusable libraries, unit tests, automated documentation, faster CI/CD, lower GPU usage, and notebook-to-Streamlit reporting workflows.</li>
+        </ul>
+      </div>
+
+      <div class="entry">
+        <div class="entry-header">
+          <div>
+            <span class="role">Machine Learning Engineer | Data Scientist</span>
+            <span class="company"> | Hotmart</span>
+          </div>
+          <time class="date" datetime="2022-04">Apr 2022 - May 2024</time>
+        </div>
+        <ul>
+          <li>Led an end-to-end embedding recommender system for digital products from business discovery through deployment on SageMaker and Kubernetes.</li>
+          <li>Increased click conversion to 8.6% versus a 2.07% baseline and drove 3.8x more purchases using OpenAI embeddings and feature pipelines.</li>
+          <li>Built a treasury forecasting model for PIX and billet payments, reducing error by 5% and delivering significant financial impact with a simpler feature set.</li>
+          <li>Re-architected chatbot context and document-processing workflows with Python, RAG, LLMs, Java, Spring Boot, and LangChain.</li>
+        </ul>
+      </div>
+
+      <div class="entry">
+        <div class="entry-header">
+          <div>
+            <span class="role">Data Scientist</span>
+            <span class="company"> | Instituto de Pesquisas Eldorado</span>
+          </div>
+          <time class="date" datetime="2020-12">Dec 2020 - Apr 2022</time>
+        </div>
+        <ul>
+          <li>Built dashboards, supervised and unsupervised models, and BigQuery pipelines for digital-bank acquisition; customer clustering reached 5% conversion versus 1% from random targeting.</li>
+        </ul>
+      </div>
+
+      <div class="entry">
+        <div class="entry-header">
+          <div>
+            <span class="role">Data Engineer</span>
+            <span class="company"> | Linx</span>
+          </div>
+          <time class="date" datetime="2018-10">Oct 2018 - Dec 2020</time>
+        </div>
+        <ul>
+          <li>Built Scala and Spark pipelines for segmentation, identity resolution, and recommendations; reduced AWS ingestion jobs from hours to minutes with incremental processing.</li>
+        </ul>
+      </div>
+
+      <div class="entry">
+        <div class="entry-header">
+          <div>
+            <span class="role">Back-End Software Engineer</span>
+            <span class="company"> | SIDIA - Samsung Instituto de P&amp;D da Amazonia</span>
+          </div>
+          <time class="date" datetime="2016-10">Oct 2016 - Sep 2018</time>
+        </div>
+        <ul>
+          <li>Developed Android and Ginga middleware components, CI workflows, and test automation; helped cut native library size by 50% and reduced test runtime from hours to seconds.</li>
+        </ul>
+      </div>
+      </section>
+
+      <section aria-labelledby="education-heading">
+        <h2 id="education-heading">Education</h2>
+        <div class="education-item">
+          <div>
+            <div class="degree">Master's in Informatics, Machine Learning</div>
+            <div class="school">Universidade Federal do Amazonas</div>
+          </div>
+          <time class="date" datetime="2019">2019 - 2022</time>
+        </div>
+        <div class="education-item">
+          <div>
+            <div class="degree">Bachelor of Computer Science</div>
+            <div class="school">Universidade Federal do Amazonas</div>
+          </div>
+          <time class="date" datetime="2012">2012 - 2016</time>
+        </div>
+      </section>
+    </main>
+  </article>
+
+  <div class="screen-note">Export tip: open this file in a browser and use Print -&gt; Save as PDF with paper size set to US Letter and margins set to Default.</div>
+</body>
+</html>
