@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kevin Takano - Resume</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #ffffff;
+      --ink: #111111;
+      --muted: #6b7280;
+      --line: #e5e7eb;
+      --pill: #f4f4f5;
+    }
+
+    @page {
+      size: letter;
+      margin: 0.5in;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: "Inter", "Segoe UI", sans-serif;
+    }
+
+    body {
+      line-height: 1.55;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+
+    .page {
+      width: min(672px, calc(100vw - 32px));
+      margin: 44px auto 64px;
+    }
+
+    .hero {
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+    }
+
+    .avatar {
+      width: 72px;
+      height: 72px;
+      flex: 0 0 72px;
+      border-radius: 14px;
+      object-fit: cover;
+      display: block;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 24px;
+      line-height: 1.2;
+      letter-spacing: -0.02em;
+      font-weight: 700;
+    }
+
+    .headline {
+      margin: 4px 0 0;
+      color: var(--muted);
+      font-size: 14px;
+      font-weight: 500;
+    }
+
+    .links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px 14px;
+      margin: 12px 0 0;
+      padding: 0;
+      list-style: none;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .section {
+      margin-top: 28px;
+    }
+
+    .section-title {
+      margin: 0 0 10px;
+      font-size: 20px;
+      line-height: 1.25;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+    }
+
+    .about {
+      margin: 0;
+      color: #1f2937;
+      font-size: 14px;
+    }
+
+    .entry {
+      margin-top: 22px;
+      break-inside: avoid;
+      page-break-inside: avoid;
+    }
+
+    .entry:first-of-type {
+      margin-top: 0;
+    }
+
+    .entry-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 16px;
+    }
+
+    .company {
+      margin: 0;
+      font-size: 16px;
+      line-height: 1.35;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+    }
+
+    .role {
+      margin: 2px 0 0;
+      color: var(--muted);
+      font-size: 14px;
+      font-weight: 500;
+    }
+
+    .date {
+      color: var(--muted);
+      font-size: 13px;
+      white-space: nowrap;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .tech-inline,
+    .entry-summary,
+    .education-detail,
+    .project-copy {
+      margin: 6px 0 0;
+      color: #1f2937;
+      font-size: 14px;
+    }
+
+    .tech-inline {
+      color: var(--muted);
+      font-size: 12.5px;
+    }
+
+    ul.bullets {
+      margin: 10px 0 0 18px;
+      padding: 0;
+    }
+
+    ul.bullets li {
+      margin: 4px 0;
+      color: #1f2937;
+      font-size: 14px;
+    }
+
+    .skill-groups {
+      display: grid;
+      gap: 18px;
+    }
+
+    .skill-group {
+      display: grid;
+      grid-template-columns: 144px 1fr;
+      gap: 14px;
+      align-items: start;
+    }
+
+    .skill-label {
+      margin: 0;
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    .pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      min-height: 26px;
+      padding: 3px 10px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: var(--pill);
+      color: #1f2937;
+      font-size: 12.5px;
+      font-weight: 500;
+    }
+
+    .project,
+    .education-item {
+      margin-top: 18px;
+      break-inside: avoid;
+      page-break-inside: avoid;
+    }
+
+    .project:first-of-type,
+    .education-item:first-of-type {
+      margin-top: 0;
+    }
+
+    .project-head,
+    .education-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 16px;
+    }
+
+    .project-title,
+    .school {
+      margin: 0;
+      font-size: 16px;
+      line-height: 1.35;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+    }
+
+    .project-meta,
+    .degree {
+      margin: 2px 0 0;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .print-note {
+      max-width: 672px;
+      margin: 0 auto 20px;
+      color: var(--muted);
+      font-size: 12px;
+      text-align: center;
+    }
+
+    @media print {
+      .page {
+        width: auto;
+        margin: 0;
+      }
+
+      .print-note {
+        display: none;
+      }
+    }
+
+    @media (max-width: 720px) {
+      .page {
+        width: calc(100vw - 28px);
+        margin: 28px auto 40px;
+      }
+
+      .hero,
+      .entry-head,
+      .project-head,
+      .education-head,
+      .skill-group {
+        display: block;
+      }
+
+      .date {
+        display: block;
+        margin-top: 4px;
+      }
+
+      .skill-group {
+        margin-top: 14px;
+      }
+
+      .skill-group:first-of-type {
+        margin-top: 0;
+      }
+
+      .avatar {
+        margin-bottom: 4px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <article class="page">
+    <header class="hero">
+      <img class="avatar" src="10998362.jpeg" alt="Kevin Takano portrait">
+      <div>
+        <h1>Kevin Takano</h1>
+        <p class="headline">AI Engineer / Machine Learning Engineer</p>
+        <ul class="links">
+          <li><a href="mailto:kevin.takano@gmail.com">kevin.takano@gmail.com</a></li>
+          <li><a href="https://www.linkedin.com/in/ktakanopy">linkedin.com/in/ktakanopy</a></li>
+          <li><a href="https://substack.com/@ktakanopy">substack.com/@ktakanopy</a></li>
+          <li>Curitiba, Brazil</li>
+        </ul>
+      </div>
+    </header>
+
+    <section class="section" aria-labelledby="about-title">
+      <h2 class="section-title" id="about-title">About</h2>
+      <p class="about">Senior engineer with 10 years of software engineering experience, including 5 years building machine learning systems across agentic AI, large language model (LLM) applications, recommender systems, forecasting, and MLOps. Built evaluation loops, guardrails, reusable platforms, and autonomous end-to-end workflows across Scala, Python, TypeScript, Java, GCP, AWS, and distributed systems.</p>
+    </section>
+
+    <section class="section" aria-labelledby="experience-title">
+      <h2 class="section-title" id="experience-title">Work Experience</h2>
+
+      <article class="entry">
+        <div class="entry-head">
+          <div>
+            <h3 class="company">QuintoAndar</h3>
+            <p class="role">Senior Machine Learning Engineer</p>
+          </div>
+          <div class="date">May 2025 - Present</div>
+        </div>
+        <p class="tech-inline">LangGraph, OpenAI, Langfuse, DSPy, Postgres, AWS SQS</p>
+        <p class="entry-summary">Building evaluation and optimization workflows for production AI systems in the rental operations domain.</p>
+        <ul class="bullets">
+          <li>Built a production LLM evaluation workflow for rent inspections using images and policy rules, including metrics, alerts, database writes, and monitoring.</li>
+          <li>Created an LLM-as-judge loop that improved classification quality by 10% and accelerated prompt iteration with stronger reliability checks.</li>
+          <li>Built conversation scoring pipelines for agentic workflows and improved quality score from 0.48 to 0.90.</li>
+        </ul>
+      </article>
+
+      <article class="entry">
+        <div class="entry-head">
+          <div>
+            <h3 class="company">Nubank</h3>
+            <p class="role">Machine Learning Engineer / Data Scientist</p>
+          </div>
+          <div class="date">May 2024 - May 2025</div>
+        </div>
+        <p class="tech-inline">Scala, Spark, TensorFlow, Docker, MkDocs</p>
+        <p class="entry-summary">Worked on credit risk and interest-rate modeling, model analysis, and internal ML platform improvements.</p>
+        <ul class="bullets">
+          <li>Built a calibration model for credit-card interest-rate prediction and reduced incorrect predictions by 80%.</li>
+          <li>Connected model behavior to causal and business metrics, including utilization, rate, and revenue outcomes.</li>
+          <li>Improved engineering velocity with reusable libraries, tests, faster CI/CD, and automated documentation.</li>
+        </ul>
+      </article>
+
+      <article class="entry">
+        <div class="entry-head">
+          <div>
+            <h3 class="company">Hotmart</h3>
+            <p class="role">Machine Learning Engineer / Data Scientist</p>
+          </div>
+          <div class="date">Apr 2022 - May 2024</div>
+        </div>
+        <p class="tech-inline">OpenAI embeddings, SageMaker, Kubernetes, RAG, A/B testing</p>
+        <p class="entry-summary">Owned end-to-end ML systems for recommendations, forecasting, chatbot architecture, and shared MLOps tooling.</p>
+        <ul class="bullets">
+          <li>Led an embedding-based recommender that increased click conversion to 8.6% versus a 2.07% baseline and drove 3.8x more purchases.</li>
+          <li>Built a treasury forecasting system for PIX and billet payments that reduced error by 5% with a simpler feature set.</li>
+          <li>Re-architected chatbot context and document-processing flows with Python, Java, Spring Boot, RAG, and LangChain.</li>
+        </ul>
+      </article>
+
+      <article class="entry">
+        <div class="entry-head">
+          <div>
+            <h3 class="company">Instituto de Pesquisas Eldorado</h3>
+            <p class="role">Data Scientist</p>
+          </div>
+          <div class="date">Dec 2020 - Apr 2022</div>
+        </div>
+        <p class="tech-inline">Python, BigQuery, Dashboards, Supervised Learning, Clustering</p>
+        <ul class="bullets">
+          <li>Built dashboards, supervised models, clustering pipelines, and BigQuery workflows for digital-bank acquisition.</li>
+          <li>Customer clustering reached 5% conversion versus 1% from random targeting.</li>
+        </ul>
+      </article>
+
+      <article class="entry">
+        <div class="entry-head">
+          <div>
+            <h3 class="company">Linx</h3>
+            <p class="role">Data Engineer</p>
+          </div>
+          <div class="date">Oct 2018 - Dec 2020</div>
+        </div>
+        <p class="tech-inline">Scala, Spark, AWS, Segmentation, Recommendations</p>
+        <ul class="bullets">
+          <li>Built Scala and Spark pipelines for segmentation, identity resolution, and recommendations.</li>
+          <li>Reduced AWS ingestion jobs from hours to minutes with incremental processing.</li>
+        </ul>
+      </article>
+
+      <article class="entry">
+        <div class="entry-head">
+          <div>
+            <h3 class="company">SIDIA - Samsung Instituto de P&amp;D da Amazonia</h3>
+            <p class="role">Back-End Software Engineer</p>
+          </div>
+          <div class="date">Oct 2016 - Sep 2018</div>
+        </div>
+        <p class="tech-inline">Java, C++, Node.js, Android, CI, Test Automation</p>
+        <ul class="bullets">
+          <li>Developed Android and Ginga middleware components and test automation for embedded software workflows.</li>
+          <li>Reduced test runtime from hours to seconds and helped cut native library size by 50%.</li>
+        </ul>
+      </article>
+    </section>
+
+    <section class="section" aria-labelledby="skills-title">
+      <h2 class="section-title" id="skills-title">Skills</h2>
+      <div class="skill-groups">
+        <div class="skill-group">
+          <h3 class="skill-label">AI / ML</h3>
+          <ul class="pills">
+            <li class="pill">LLMs</li>
+            <li class="pill">RAG</li>
+            <li class="pill">Prompt Engineering</li>
+            <li class="pill">Evaluation Frameworks</li>
+            <li class="pill">Recommender Systems</li>
+            <li class="pill">Forecasting</li>
+            <li class="pill">PyTorch</li>
+            <li class="pill">TensorFlow</li>
+            <li class="pill">CatBoost</li>
+          </ul>
+        </div>
+        <div class="skill-group">
+          <h3 class="skill-label">Engineering</h3>
+          <ul class="pills">
+            <li class="pill">Python</li>
+            <li class="pill">Scala</li>
+            <li class="pill">TypeScript</li>
+            <li class="pill">Java</li>
+            <li class="pill">SQL</li>
+            <li class="pill">APIs</li>
+            <li class="pill">CI/CD</li>
+            <li class="pill">Testing</li>
+            <li class="pill">Distributed Systems</li>
+          </ul>
+        </div>
+        <div class="skill-group">
+          <h3 class="skill-label">Platforms</h3>
+          <ul class="pills">
+            <li class="pill">AWS</li>
+            <li class="pill">SageMaker</li>
+            <li class="pill">Airflow</li>
+            <li class="pill">Kubernetes</li>
+            <li class="pill">Docker</li>
+            <li class="pill">Spark</li>
+            <li class="pill">BigQuery</li>
+            <li class="pill">Postgres</li>
+            <li class="pill">LangGraph</li>
+            <li class="pill">LangChain</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="projects-title">
+      <h2 class="section-title" id="projects-title">Projects</h2>
+
+      <article class="project">
+        <div class="project-head">
+          <div>
+            <h3 class="project-title">Recommendation AI Portfolio</h3>
+            <p class="project-meta"><a href="https://github.com/ktakanopy/recommendation-ai">github.com/ktakanopy/recommendation-ai</a></p>
+          </div>
+        </div>
+        <p class="project-copy">Built a recommendation-system portfolio that connects research, production APIs, and a user-facing bot experience around movie recommendations.</p>
+        <p class="project-copy">It combines a PyTorch neural collaborative filtering study, a FastAPI service with Clean Architecture, PostgreSQL and Annoy for serving, and a LangGraph Telegram bot for onboarding and personalized recommendations.</p>
+        <ul class="pills" style="margin-top: 10px;">
+          <li class="pill">PyTorch</li>
+          <li class="pill">FastAPI</li>
+          <li class="pill">PostgreSQL</li>
+          <li class="pill">Annoy</li>
+          <li class="pill">LangGraph</li>
+        </ul>
+      </article>
+
+      <article class="project">
+        <div class="project-head">
+          <div>
+            <h3 class="project-title">Writing and AI Notes</h3>
+            <p class="project-meta"><a href="https://substack.com/@ktakanopy">substack.com/@ktakanopy</a></p>
+          </div>
+        </div>
+        <p class="project-copy">I write on Substack about AI engineering skills, developer workflows, and practical lessons from shipping AI systems.</p>
+      </article>
+    </section>
+
+    <section class="section" aria-labelledby="education-title">
+      <h2 class="section-title" id="education-title">Education</h2>
+
+      <article class="education-item">
+        <div class="education-head">
+          <div>
+            <h3 class="school">Universidade Federal do Amazonas</h3>
+            <p class="degree">Master's in Informatics, Machine Learning</p>
+          </div>
+          <div class="date">2019 - 2022</div>
+        </div>
+      </article>
+
+      <article class="education-item">
+        <div class="education-head">
+          <div>
+            <h3 class="school">Universidade Federal do Amazonas</h3>
+            <p class="degree">Bachelor of Computer Science</p>
+          </div>
+          <div class="date">2012 - 2016</div>
+        </div>
+      </article>
+    </section>
+  </article>
+
+  <div class="print-note">This file is ready for GitHub Pages as-is. Rename it to `index.html` if you want it to be the default page.</div>
+</body>
+</html>
