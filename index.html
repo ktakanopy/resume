@@ -227,6 +227,10 @@
         margin-top: 0.03in;
       }
 
+      section[aria-labelledby="projects-heading"] {
+        break-before: page;
+      }
+
       .screen-note {
         display: none;
       }
@@ -264,7 +268,7 @@
         <h2 id="skills-heading">Core Skills</h2>
         <div class="skills">
           <strong>Agentic AI</strong>
-          <span>AI agents, agentic workflows, LLM evaluation, guardrails, feedback loops, OpenAI, LangGraph, LangChain, DSPy, prompt engineering, RAG</span>
+          <span>AI agents, agentic workflows, LLM evaluation, guardrails, feedback loops, OpenAI, Claude Skills, Hamming, LangGraph, LangChain, DSPy, prompt engineering, RAG</span>
           <strong>Engineering</strong>
           <span>Scala, Python, TypeScript, Java, Node.js, SQL, backend systems, distributed systems, APIs, unit testing, CI/CD</span>
           <strong>Platforms</strong>
@@ -280,10 +284,24 @@
         <div class="entry">
           <div class="entry-header">
             <div>
+              <span class="role">AI Engineer</span>
+              <span class="company"> | Luma Health</span>
+            </div>
+            <time class="date" datetime="2026-05">May 2026 - Present</time>
+          </div>
+          <ul>
+            <li>Developed automated evaluation tests and analysis workflows with Claude Skills and Hamming for a healthcare scheduling agent, identifying critical bugs and improving quality before production release.</li>
+            <li>Designed, developed, and deployed a new FAQ agent architecture that improved response quality by 10-15% and made the agent approximately 3x faster.</li>
+          </ul>
+        </div>
+
+        <div class="entry">
+          <div class="entry-header">
+            <div>
               <span class="role">Senior Machine Learning Engineer</span>
               <span class="company"> | QuintoAndar</span>
             </div>
-            <time class="date" datetime="2025-05">May 2025 - Present</time>
+            <time class="date" datetime="2025-05">May 2025 - May 2026</time>
           </div>
           <ul>
             <li>Built a production LLM evaluation workflow for rent inspections using images and policy rules, with metrics, alerts, database writes, and monitoring.</li>
@@ -376,6 +394,20 @@
 
       <section aria-labelledby="projects-heading">
         <h2 id="projects-heading">Portfolio Projects</h2>
+
+        <div class="compact-entry">
+          <div class="compact-header">
+            <div>
+              <span class="role">CAPY Appointment Bot</span>
+              <span class="company"> | <a href="https://github.com/ktakanopy/capy-appointment-bot">github.com/ktakanopy/capy-appointment-bot</a></span>
+            </div>
+          </div>
+          <p>Built a clinic appointment assistant with FastAPI, LangGraph, OpenAI, and Streamlit for secure, multi-turn identity verification and appointment management.</p>
+          <ul>
+            <li>Kept authorization and mutations deterministic with verification gating, retry lockout, ownership checks, idempotent actions, and PII-redacted Langfuse tracing.</li>
+            <li>Created unit, graph, API, and multi-turn eval suites with an LLM judge to validate rerouting, failure recovery, and prompt-injection resistance.</li>
+          </ul>
+        </div>
 
         <div class="compact-entry">
           <div class="compact-header">
